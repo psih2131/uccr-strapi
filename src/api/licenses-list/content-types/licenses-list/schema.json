@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "licenses_lists",
+  "info": {
+    "singularName": "licenses-list",
+    "pluralName": "licenses-lists",
+    "displayName": "licenses_list"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

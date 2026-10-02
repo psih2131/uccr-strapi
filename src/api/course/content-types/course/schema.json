@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "courses"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "direction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::direction.direction",
+      "inversedBy": "courses"
+    },
+    "category_direction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category-direction.category-direction",
+      "inversedBy": "courses"
+    },
+    "preview": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "popular_courses_add": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::direction.direction",
+      "inversedBy": "populars_courses"
+    },
+    "H1_title": {
+      "type": "string"
+    },
+    "form_learning": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "old_price_rub": {
+      "type": "integer"
+    },
+    "default_price": {
+      "type": "integer"
+    },
+    "page_preview": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "what_waiting_for_section": {
+      "type": "component",
+      "component": "shared.what-waiting-for-item",
+      "repeatable": true
+    },
+    "price_v1_section": {
+      "type": "component",
+      "component": "sections.price-sec-v1",
+      "repeatable": false
+    },
+    "price_sec_v2": {
+      "type": "component",
+      "component": "sections.price-sec-v2",
+      "repeatable": false
+    },
+    "for_who_section": {
+      "type": "component",
+      "component": "sections.for-who-sec",
+      "repeatable": false
+    }
+  }
+}

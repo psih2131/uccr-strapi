@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_princip_items",
+  "info": {
+    "displayName": "princip_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

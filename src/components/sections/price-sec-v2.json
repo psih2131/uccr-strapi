@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_price_sec_v2s",
+  "info": {
+    "displayName": "price_sec_v2"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string",
+      "default": "Стоимость обучения и тарифы"
+    },
+    "price_list": {
+      "type": "component",
+      "component": "shared.price-item-2",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

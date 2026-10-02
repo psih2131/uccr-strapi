@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "licenses",
+  "info": {
+    "singularName": "license",
+    "pluralName": "licenses",
+    "displayName": "licenses"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page_title": {
+      "type": "string"
+    },
+    "page_subtitle": {
+      "type": "text"
+    },
+    "faq_sec": {
+      "type": "component",
+      "component": "shared.faq-item",
+      "repeatable": true
+    }
+  }
+}

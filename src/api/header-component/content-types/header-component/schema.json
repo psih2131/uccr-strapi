@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "header_components",
+  "info": {
+    "singularName": "header-component",
+    "pluralName": "header-components",
+    "displayName": "_header_component"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

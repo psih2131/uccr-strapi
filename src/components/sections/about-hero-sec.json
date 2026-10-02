@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_about_hero_secs",
+  "info": {
+    "displayName": "about_hero_sec"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "about_items": {
+      "type": "component",
+      "component": "shared.about-item-v2",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

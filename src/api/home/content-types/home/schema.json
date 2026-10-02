@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_sec": {
+      "type": "component",
+      "component": "sections.home-hero-sec",
+      "repeatable": false
+    },
+    "popular_programs_sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course.course"
+    },
+    "review_home_sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review"
+    },
+    "faq_sections": {
+      "type": "component",
+      "component": "shared.faq-item",
+      "repeatable": true
+    },
+    "partners_section": {
+      "type": "component",
+      "component": "shared.partner-item",
+      "repeatable": true
+    },
+    "home_news_sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_directiond_heroes",
+  "info": {
+    "displayName": "hero"
+  },
+  "options": {},
+  "attributes": {
+    "section_title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "advantages": {
+      "type": "component",
+      "component": "directiond.advantages-item",
+      "repeatable": true
+    },
+    "img_1": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "img_2": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "form_sections",
+  "info": {
+    "singularName": "form-section",
+    "pluralName": "form-sections",
+    "displayName": "form_section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "socials_media_links": {
+      "type": "component",
+      "component": "shared.social-media",
+      "repeatable": true
+    }
+  }
+}

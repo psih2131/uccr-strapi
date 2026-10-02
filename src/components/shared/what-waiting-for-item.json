@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_what_waiting_for_items",
+  "info": {
+    "displayName": "what_waiting_for_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "time": {
+      "type": "string",
+      "default": "20-30 часов"
+    }
+  },
+  "config": {}
+}

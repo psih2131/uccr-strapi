@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_price_sec_v1s",
+  "info": {
+    "displayName": "price_sec_v1"
+  },
+  "options": {},
+  "attributes": {
+    "price_item": {
+      "type": "component",
+      "component": "shared.price-item",
+      "repeatable": true
+    },
+    "docs": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

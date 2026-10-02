@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "docs_pages",
+  "info": {
+    "singularName": "docs-page",
+    "pluralName": "docs-pages",
+    "displayName": "docs_pages"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

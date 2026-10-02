@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "cookie_components",
+  "info": {
+    "singularName": "cookie-component",
+    "pluralName": "cookie-components",
+    "displayName": "_cookie_component"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

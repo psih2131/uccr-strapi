@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "directions",
+  "info": {
+    "singularName": "direction",
+    "pluralName": "directions",
+    "displayName": "directions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course.course",
+      "mappedBy": "direction"
+    },
+    "hero_section": {
+      "type": "component",
+      "component": "directiond.hero",
+      "repeatable": false
+    },
+    "faq_sec": {
+      "type": "component",
+      "component": "shared.faq-item",
+      "repeatable": true
+    },
+    "populars_courses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course.course",
+      "mappedBy": "popular_courses_add"
+    },
+    "reviews_section": {
+      "type": "component",
+      "component": "sections.reviews",
+      "repeatable": false
+    },
+    "category_directions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category-direction.category-direction",
+      "mappedBy": "direction"
+    }
+  }
+}

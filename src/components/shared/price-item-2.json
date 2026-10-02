@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_price_item_2s",
+  "info": {
+    "displayName": "price_item_2"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "hour": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "string"
+    },
+    "current_price": {
+      "type": "integer"
+    },
+    "old_price": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

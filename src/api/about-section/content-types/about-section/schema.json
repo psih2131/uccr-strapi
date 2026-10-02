@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_sections",
+  "info": {
+    "singularName": "about-section",
+    "pluralName": "about-sections",
+    "displayName": "about_section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "info_items": {
+      "type": "component",
+      "component": "shared.about-item",
+      "repeatable": true
+    },
+    "about_text": {
+      "type": "text"
+    },
+    "button_text": {
+      "type": "string",
+      "default": "Подробнее о компании",
+      "required": true
+    }
+  }
+}

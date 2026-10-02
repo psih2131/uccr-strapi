@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_staps_items",
+  "info": {
+    "displayName": "staps_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

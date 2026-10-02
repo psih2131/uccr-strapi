@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "course_docs_list_secs",
+  "info": {
+    "singularName": "course-docs-list-sec",
+    "pluralName": "course-docs-list-secs",
+    "displayName": "course_docs_list_sec"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "docs_items": {
+      "type": "component",
+      "component": "shared.docs-item",
+      "repeatable": true
+    }
+  }
+}

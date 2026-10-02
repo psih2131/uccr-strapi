@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_docs_items",
+  "info": {
+    "displayName": "docs_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

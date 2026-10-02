@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "sections": {
+    "collectionTypes": {
+      "groups": [
+        {
+          "parent": null,
+          "name": "sub_types",
+          "id": "grp_5e4d71a726324ef7863b1f66",
+          "children": [
+            {
+              "uid": "api::team.team",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::review.review",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::video-review.video-review",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::licenses-list.licenses-list",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::docs-page.docs-page",
+              "type": "contentType"
+            }
+          ]
+        },
+        {
+          "parent": null,
+          "name": "main_types",
+          "id": "grp_70b6b994cb244cb498eb5624",
+          "children": [
+            {
+              "uid": "api::direction.direction",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::course.course",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::city.city",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::category-direction.category-direction",
+              "type": "contentType"
+            }
+          ]
+        },
+        {
+          "parent": null,
+          "name": "blog",
+          "id": "grp_1e7d5ded14aa40d7bfcca730",
+          "children": [
+            {
+              "uid": "api::blog.blog",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::blog-category.blog-category",
+              "type": "contentType"
+            }
+          ]
+        }
+      ]
+    },
+    "singleTypes": {
+      "groups": [
+        {
+          "parent": null,
+          "name": "components",
+          "id": "grp_0129736a67ed4966b5a0eb66",
+          "children": [
+            {
+              "uid": "api::about-section.about-section",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::document-section.document-section",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::team-section.team-section",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::video-reviews-section.video-reviews-section",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::form-section.form-section",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::course-staps-section.course-staps-section",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::course-docs-list-sec.course-docs-list-sec",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::course-faq-sec.course-faq-sec",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::course-reviews-sec.course-reviews-sec",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::princips-sec.princips-sec",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::header-component.header-component",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::footer-component.footer-component",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::cookie-component.cookie-component",
+              "type": "contentType"
+            }
+          ]
+        },
+        {
+          "parent": null,
+          "name": "pages",
+          "id": "grp_2ffe745c3d0e4c8c96530e1c",
+          "children": [
+            {
+              "uid": "api::contact.contact",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::license.license",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::about.about",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::home.home",
+              "type": "contentType"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

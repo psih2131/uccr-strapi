@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "course_faq_secs",
+  "info": {
+    "singularName": "course-faq-sec",
+    "pluralName": "course-faq-secs",
+    "displayName": "course_faq_sec"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "faq_items": {
+      "type": "component",
+      "component": "shared.faq-item",
+      "repeatable": true
+    }
+  }
+}

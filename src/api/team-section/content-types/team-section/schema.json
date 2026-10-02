@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "team_sections",
+  "info": {
+    "singularName": "team-section",
+    "pluralName": "team-sections",
+    "displayName": "team_section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section_title": {
+      "type": "string"
+    },
+    "teams_list": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::team.team"
+    }
+  }
+}

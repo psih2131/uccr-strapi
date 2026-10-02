@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "princips_secs",
+  "info": {
+    "singularName": "princips-sec",
+    "pluralName": "princips-secs",
+    "displayName": "princips_sec"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "princips_items": {
+      "type": "component",
+      "component": "shared.princip-item",
+      "repeatable": true
+    }
+  }
+}

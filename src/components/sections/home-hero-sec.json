@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_sections_home_hero_secs",
+  "info": {
+    "displayName": "home_hero_sec"
+  },
+  "options": {},
+  "attributes": {
+    "section_title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "box1_title": {
+      "type": "string"
+    },
+    "box_2_title": {
+      "type": "string"
+    },
+    "box_3_title": {
+      "type": "string"
+    },
+    "box_4_title": {
+      "type": "string"
+    },
+    "box_4_socials": {
+      "type": "component",
+      "component": "shared.social-media",
+      "repeatable": true
+    },
+    "box_4_phone": {
+      "type": "string"
+    },
+    "box_4_email": {
+      "type": "email"
+    },
+    "box_1_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "box_4_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

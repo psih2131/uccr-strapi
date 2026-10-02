@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_directiond_advantages_items",
+  "info": {
+    "displayName": "advantages_item"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

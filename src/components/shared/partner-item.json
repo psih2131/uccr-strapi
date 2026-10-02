@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_partner_items",
+  "info": {
+    "displayName": "partner_item"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

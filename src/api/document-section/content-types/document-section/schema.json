@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "document_sections",
+  "info": {
+    "singularName": "document-section",
+    "pluralName": "document-sections",
+    "displayName": "document_section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "subtitle_section": {
+      "type": "text"
+    },
+    "title_2": {
+      "type": "string"
+    },
+    "list_items": {
+      "type": "component",
+      "component": "directiond.advantages-item",
+      "repeatable": true
+    },
+    "doc_preciew": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

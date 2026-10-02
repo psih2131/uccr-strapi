@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "course_reviews_secs",
+  "info": {
+    "singularName": "course-reviews-sec",
+    "pluralName": "course-reviews-secs",
+    "displayName": "course_reviews_sec"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reviews": {
+      "type": "component",
+      "component": "sections.reviews",
+      "repeatable": false
+    }
+  }
+}

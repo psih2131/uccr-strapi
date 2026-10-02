@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_about_item_v2s",
+  "info": {
+    "displayName": "about_item_v2"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

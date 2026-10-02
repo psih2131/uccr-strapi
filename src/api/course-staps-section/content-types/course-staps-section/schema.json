@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "course_staps_sections",
+  "info": {
+    "singularName": "course-staps-section",
+    "pluralName": "course-staps-sections",
+    "displayName": "course_staps_section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "staps_item": {
+      "type": "component",
+      "component": "shared.staps-item",
+      "repeatable": true
+    }
+  }
+}

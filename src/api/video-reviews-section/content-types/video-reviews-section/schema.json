@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "video_reviews_sections",
+  "info": {
+    "singularName": "video-reviews-section",
+    "pluralName": "video-reviews-sections",
+    "displayName": "video_reviews_section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "video_reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::video-review.video-review"
+    }
+  }
+}
