@@ -938,10 +938,6 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::direction.direction'
     >;
-    category_direction: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::category-direction.category-direction'
-    >;
     for_who_section: Schema.Attribute.Component<'sections.for-who-sec', false>;
     form_learning: Schema.Attribute.String;
     H1_title: Schema.Attribute.String;

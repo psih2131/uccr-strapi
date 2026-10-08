@@ -1,0 +1,25 @@
+name: Deploy uccr Strapi
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            cd /root/opt/uccr-back-strapi
+            git fetch origin main
+            git reset --hard origin/main
+            npm i
+            git restore package-lock.json
+            pm2 restart uccr-strapi
