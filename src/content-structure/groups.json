@@ -128,6 +128,10 @@
             {
               "uid": "api::cookie-component.cookie-component",
               "type": "contentType"
+            },
+            {
+              "uid": "api::contacts-widget.contacts-widget",
+              "type": "contentType"
             }
           ]
         },
