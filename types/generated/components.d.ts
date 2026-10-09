@@ -209,6 +209,17 @@ export interface SharedPrincipItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSicialsItemV2 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_sicials_item_v2s';
+  info: {
+    displayName: 'sicials_item_v2';
+  };
+  attributes: {
+    img: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
+    link: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSocialMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_social_medias';
   info: {
@@ -265,6 +276,7 @@ declare module '@strapi/strapi' {
       'shared.price-item': SharedPriceItem;
       'shared.price-item-2': SharedPriceItem2;
       'shared.princip-item': SharedPrincipItem;
+      'shared.sicials-item-v2': SharedSicialsItemV2;
       'shared.social-media': SharedSocialMedia;
       'shared.staps-item': SharedStapsItem;
       'shared.what-waiting-for-item': SharedWhatWaitingForItem;

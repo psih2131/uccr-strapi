@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_sicials_item_v2s",
+  "info": {
+    "displayName": "sicials_item_v2"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -771,6 +771,35 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiContactsWidgetContactsWidget
+  extends Struct.SingleTypeSchema {
+  collectionName: 'contacts_widgets';
+  info: {
+    displayName: '_contacts_widget';
+    pluralName: 'contacts-widgets';
+    singularName: 'contacts-widget';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contacts-widget.contacts-widget'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sicials_item: Schema.Attribute.Component<'shared.sicials-item-v2', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCookieComponentCookieComponent
   extends Struct.SingleTypeSchema {
   collectionName: 'cookie_components';
@@ -1983,6 +2012,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::city.city': ApiCityCity;
       'api::contact.contact': ApiContactContact;
+      'api::contacts-widget.contacts-widget': ApiContactsWidgetContactsWidget;
       'api::cookie-component.cookie-component': ApiCookieComponentCookieComponent;
       'api::course-docs-list-sec.course-docs-list-sec': ApiCourseDocsListSecCourseDocsListSec;
       'api::course-faq-sec.course-faq-sec': ApiCourseFaqSecCourseFaqSec;

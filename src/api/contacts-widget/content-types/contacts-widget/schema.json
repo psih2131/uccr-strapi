@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts_widgets",
+  "info": {
+    "singularName": "contacts-widget",
+    "pluralName": "contacts-widgets",
+    "displayName": "_contacts_widget"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sicials_item": {
+      "type": "component",
+      "component": "shared.sicials-item-v2",
+      "repeatable": true
+    }
+  }
+}
