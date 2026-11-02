@@ -37,6 +37,11 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "Seo": {
+      "type": "component",
+      "component": "main.seo",
+      "repeatable": false
     }
   }
 }

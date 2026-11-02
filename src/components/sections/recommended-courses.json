@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_recommended_courses",
+  "info": {
+    "displayName": "recommended_courses"
+  },
+  "options": {},
+  "attributes": {
+    "slug": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

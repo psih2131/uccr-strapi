@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_main_seos",
+  "info": {
+    "displayName": "SEO"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "meta_description": {
+      "type": "text"
+    },
+    "keywords": {
+      "type": "text"
+    },
+    "og_type": {
+      "type": "string"
+    },
+    "og_title": {
+      "type": "text"
+    },
+    "og_description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

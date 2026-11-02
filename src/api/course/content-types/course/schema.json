@@ -67,7 +67,7 @@
     "page_preview": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images"
       ]
@@ -91,6 +91,27 @@
       "type": "component",
       "component": "sections.for-who-sec",
       "repeatable": false
+    },
+    "seo_text_section": {
+      "type": "text"
+    },
+    "faq_section": {
+      "type": "component",
+      "component": "shared.faq-item",
+      "repeatable": true
+    },
+    "Seo": {
+      "type": "component",
+      "component": "main.seo",
+      "repeatable": false
+    },
+    "seo_text_down": {
+      "type": "text"
+    },
+    "recommended_courses_item": {
+      "type": "component",
+      "component": "sections.recommended-courses",
+      "repeatable": true
     }
   }
 }

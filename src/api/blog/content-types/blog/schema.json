@@ -48,6 +48,11 @@
       "relation": "oneToMany",
       "target": "api::blog.blog",
       "mappedBy": "blog"
+    },
+    "Seo": {
+      "type": "component",
+      "component": "main.seo",
+      "repeatable": false
     }
   }
 }

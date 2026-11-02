@@ -21,6 +21,11 @@
       "type": "component",
       "component": "shared.faq-item",
       "repeatable": true
+    },
+    "Seo": {
+      "type": "component",
+      "component": "main.seo",
+      "repeatable": false
     }
   }
 }

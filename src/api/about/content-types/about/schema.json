@@ -25,6 +25,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::licenses-list.licenses-list"
+    },
+    "Seo": {
+      "type": "component",
+      "component": "main.seo",
+      "repeatable": false
     }
   }
 }

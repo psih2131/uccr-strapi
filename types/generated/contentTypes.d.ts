@@ -502,6 +502,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     partners: Schema.Attribute.Component<'shared.partner-item', true>;
     publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'main.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -601,6 +602,7 @@ export interface ApiBlogCategoryBlogCategory
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'main.seo', false>;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -635,6 +637,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     post_text: Schema.Attribute.RichText;
     publishedAt: Schema.Attribute.DateTime;
     recommended_posts: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
+    Seo: Schema.Attribute.Component<'main.seo', false>;
     slug: Schema.Attribute.UID<'title'>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
@@ -763,6 +766,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
     map_location: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'main.seo', false>;
     socials_media: Schema.Attribute.Component<'shared.social-media', true>;
     time_work: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -967,6 +971,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::direction.direction'
     >;
+    faq_section: Schema.Attribute.Component<'shared.faq-item', true>;
     for_who_section: Schema.Attribute.Component<'sections.for-who-sec', false>;
     form_learning: Schema.Attribute.String;
     H1_title: Schema.Attribute.String;
@@ -977,7 +982,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     old_price_rub: Schema.Attribute.Integer;
-    page_preview: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    page_preview: Schema.Attribute.Media<'images'>;
     popular_courses_add: Schema.Attribute.Relation<
       'manyToOne',
       'api::direction.direction'
@@ -989,6 +994,13 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
       false
     >;
     publishedAt: Schema.Attribute.DateTime;
+    recommended_courses_item: Schema.Attribute.Component<
+      'sections.recommended-courses',
+      true
+    >;
+    Seo: Schema.Attribute.Component<'main.seo', false>;
+    seo_text_down: Schema.Attribute.Text;
+    seo_text_section: Schema.Attribute.Text;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     subtitle: Schema.Attribute.Text;
     time: Schema.Attribute.String;
@@ -1036,6 +1048,7 @@ export interface ApiDirectionDirection extends Struct.CollectionTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     reviews_section: Schema.Attribute.Component<'sections.reviews', false>;
+    Seo: Schema.Attribute.Component<'main.seo', false>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1065,6 +1078,7 @@ export interface ApiDocsPageDocsPage extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'main.seo', false>;
     slug: Schema.Attribute.UID<'title'>;
     text: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
@@ -1242,6 +1256,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::review.review'
     >;
+    Seo: Schema.Attribute.Component<'main.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1272,6 +1287,7 @@ export interface ApiLicenseLicense extends Struct.SingleTypeSchema {
     page_subtitle: Schema.Attribute.Text;
     page_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'main.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

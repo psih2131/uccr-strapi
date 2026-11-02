@@ -20,6 +20,11 @@
     },
     "text": {
       "type": "richtext"
+    },
+    "Seo": {
+      "type": "component",
+      "component": "main.seo",
+      "repeatable": false
     }
   }
 }

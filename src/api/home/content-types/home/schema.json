@@ -40,6 +40,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::blog.blog"
+    },
+    "Seo": {
+      "type": "component",
+      "component": "main.seo",
+      "repeatable": false
     }
   }
 }

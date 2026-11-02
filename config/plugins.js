@@ -38,4 +38,9 @@ module.exports = () => ({
       },
     },
   },
+  'course-import': {
+    enabled: true,
+    resolve: './src/plugins/course-import',
+  },
 });
+

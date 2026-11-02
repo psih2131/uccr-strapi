@@ -52,6 +52,11 @@
       "relation": "oneToMany",
       "target": "api::category-direction.category-direction",
       "mappedBy": "direction"
+    },
+    "Seo": {
+      "type": "component",
+      "component": "main.seo",
+      "repeatable": false
     }
   }
 }

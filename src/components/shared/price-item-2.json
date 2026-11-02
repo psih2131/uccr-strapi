@@ -12,7 +12,7 @@
       "type": "string"
     },
     "hour": {
-      "type": "integer"
+      "type": "string"
     },
     "type": {
       "type": "string"

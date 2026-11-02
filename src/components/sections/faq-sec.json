@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_faq_secs",
+  "info": {
+    "displayName": "faq_sec"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string",
+      "default": "Часто-задаваемые вопросы"
+    },
+    "faq_items": {
+      "type": "component",
+      "component": "shared.faq-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -24,6 +24,11 @@
       "relation": "manyToMany",
       "target": "api::blog.blog",
       "mappedBy": "blog_categories"
+    },
+    "Seo": {
+      "type": "component",
+      "component": "main.seo",
+      "repeatable": false
     }
   }
 }

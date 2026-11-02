@@ -24,6 +24,21 @@ export interface DirectiondHero extends Struct.ComponentSchema {
   };
 }
 
+export interface MainSeo extends Struct.ComponentSchema {
+  collectionName: 'components_main_seos';
+  info: {
+    displayName: 'SEO';
+  };
+  attributes: {
+    keywords: Schema.Attribute.Text;
+    meta_description: Schema.Attribute.Text;
+    og_description: Schema.Attribute.Text;
+    og_title: Schema.Attribute.Text;
+    og_type: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface SectionsAboutHeroSec extends Struct.ComponentSchema {
   collectionName: 'components_sections_about_hero_secs';
   info: {
@@ -34,6 +49,18 @@ export interface SectionsAboutHeroSec extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images'>;
     text: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsFaqSec extends Struct.ComponentSchema {
+  collectionName: 'components_sections_faq_secs';
+  info: {
+    displayName: 'faq_sec';
+  };
+  attributes: {
+    faq_items: Schema.Attribute.Component<'shared.faq-item', true>;
+    title_section: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u0427\u0430\u0441\u0442\u043E-\u0437\u0430\u0434\u0430\u0432\u0430\u0435\u043C\u044B\u0435 \u0432\u043E\u043F\u0440\u043E\u0441\u044B'>;
   };
 }
 
@@ -89,6 +116,16 @@ export interface SectionsPriceSecV2 extends Struct.ComponentSchema {
     price_list: Schema.Attribute.Component<'shared.price-item-2', true>;
     title_section: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'\u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F \u0438 \u0442\u0430\u0440\u0438\u0444\u044B'>;
+  };
+}
+
+export interface SectionsRecommendedCourses extends Struct.ComponentSchema {
+  collectionName: 'components_sections_recommended_courses';
+  info: {
+    displayName: 'recommended_courses';
+  };
+  attributes: {
+    slug: Schema.Attribute.String;
   };
 }
 
@@ -190,7 +227,7 @@ export interface SharedPriceItem2 extends Struct.ComponentSchema {
   };
   attributes: {
     current_price: Schema.Attribute.Integer;
-    hour: Schema.Attribute.Integer;
+    hour: Schema.Attribute.String;
     old_price: Schema.Attribute.Integer;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
@@ -261,11 +298,14 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'directiond.advantages-item': DirectiondAdvantagesItem;
       'directiond.hero': DirectiondHero;
+      'main.seo': MainSeo;
       'sections.about-hero-sec': SectionsAboutHeroSec;
+      'sections.faq-sec': SectionsFaqSec;
       'sections.for-who-sec': SectionsForWhoSec;
       'sections.home-hero-sec': SectionsHomeHeroSec;
       'sections.price-sec-v1': SectionsPriceSecV1;
       'sections.price-sec-v2': SectionsPriceSecV2;
+      'sections.recommended-courses': SectionsRecommendedCourses;
       'sections.reviews': SectionsReviews;
       'shared.about-item': SharedAboutItem;
       'shared.about-item-v2': SharedAboutItemV2;
