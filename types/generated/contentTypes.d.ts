@@ -659,6 +659,8 @@ export interface ApiCategoryDirectionCategoryDirection
     draftAndPublish: true;
   };
   attributes: {
+    cat_id: Schema.Attribute.UID;
+    cat_image: Schema.Attribute.Media<'images'>;
     courses: Schema.Attribute.Relation<'oneToMany', 'api::course.course'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

@@ -98,7 +98,8 @@ const HomePage = () => {
           <Typography variant="alpha">Импорт курсов</Typography>
           <Typography textColor="neutral600">
             Выберите направление, загрузите JSON из парсера. Курсы без ai_data будут пропущены.
-            Существующие курсы обновляются по slug.
+            Существующие курсы обновляются по slug. Если в курсе есть category.value.id_cat,
+            он связывается с категорией по cat_id. Без категории курс всё равно импортируется.
           </Typography>
 
           {error ? (

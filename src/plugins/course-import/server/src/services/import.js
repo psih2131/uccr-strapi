@@ -2,6 +2,7 @@
 
 const COURSE_UID = 'api::course.course';
 const DIRECTION_UID = 'api::direction.direction';
+const CATEGORY_UID = 'api::category-direction.category-direction';
 
 function isEmptyAiData(aiData) {
   if (aiData == null) return true;
@@ -18,6 +19,14 @@ function parsePrice(value) {
 
   const parsed = Number(digits);
   return Number.isFinite(parsed) ? parsed : null;
+}
+
+function firstFormat(aiData) {
+  const items = aiData?.price_variants?.value;
+  if (!Array.isArray(items)) return null;
+
+  const format = items.find((item) => typeof item?.format === 'string' && item.format.trim())?.format;
+  return format ? format.trim() : null;
 }
 
 function normalizePosts(payload) {
@@ -118,6 +127,42 @@ function mapRecommendedCourses(aiData) {
     .filter((item) => item.slug);
 }
 
+function readCategoryId(aiData) {
+  const id = aiData?.category?.value?.id_cat;
+  if (id == null || id === '') return null;
+
+  const catId = String(id).trim();
+  return /^\d+$/.test(catId) ? catId : null;
+}
+
+async function loadCategoryMap(strapi) {
+  const map = new Map();
+  const pageSize = 100;
+  let start = 0;
+
+  while (true) {
+    const items = await strapi.documents(CATEGORY_UID).findMany({
+      fields: ['cat_id'],
+      status: 'draft',
+      start,
+      limit: pageSize,
+    });
+
+    if (!items?.length) break;
+
+    for (const item of items) {
+      if (item?.cat_id && item.documentId) {
+        map.set(String(item.cat_id), item.documentId);
+      }
+    }
+
+    if (items.length < pageSize) break;
+    start += pageSize;
+  }
+
+  return map;
+}
+
 function mapCourseData(post, directionDocumentId) {
   const aiData = post.ai_data;
   const slug = aiData?.seo?.value?.slug;
@@ -133,6 +178,7 @@ function mapCourseData(post, directionDocumentId) {
     title,
     H1_title: title,
     time: aiData?.training?.value?.duration || null,
+    form_learning: firstFormat(aiData),
     old_price_rub: parsePrice(priceValue.old_price ?? priceValue.old_price_rub),
     default_price: parsePrice(priceValue.current_price ?? priceValue.default_price),
     faq_section: mapFaq(aiData),
@@ -180,6 +226,7 @@ module.exports = ({ strapi }) => ({
     }
 
     const list = normalizePosts(posts);
+    const categoryMap = await loadCategoryMap(strapi);
     const result = {
       total: list.length,
       skipped: 0,
@@ -201,6 +248,16 @@ module.exports = ({ strapi }) => ({
           continue;
         }
 
+        const catId = readCategoryId(post.ai_data);
+        const categoryDocumentId = catId ? categoryMap.get(catId) : null;
+        if (catId && !categoryDocumentId) {
+          result.errors.push({
+            id: post?.id || null,
+            slug: data.slug,
+            message: `категория с cat_id ${catId} не найдена, курс сохранён без неё`,
+          });
+        }
+
         const existing = await strapi.documents(COURSE_UID).findMany({
           filters: { slug: { $eq: data.slug } },
           fields: ['slug'],
@@ -218,13 +275,21 @@ module.exports = ({ strapi }) => ({
               direction: {
                 set: [directionDocumentId],
               },
+              ...(categoryDocumentId
+                ? { category_direction: { set: [categoryDocumentId] } }
+                : {}),
             },
             status: 'published',
           });
           result.updated += 1;
         } else {
           await strapi.documents(COURSE_UID).create({
-            data,
+            data: {
+              ...data,
+              ...(categoryDocumentId
+                ? { category_direction: { connect: [categoryDocumentId] } }
+                : {}),
+            },
             status: 'published',
           });
           result.created += 1;

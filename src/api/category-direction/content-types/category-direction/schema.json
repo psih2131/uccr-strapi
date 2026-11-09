@@ -29,6 +29,16 @@
       "relation": "oneToMany",
       "target": "api::course.course",
       "mappedBy": "category_direction"
+    },
+    "cat_id": {
+      "type": "uid"
+    },
+    "cat_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
