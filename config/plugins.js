@@ -46,5 +46,9 @@ module.exports = () => ({
     enabled: true,
     resolve: './src/plugins/category-import',
   },
+  'course-prices': {
+    enabled: true,
+    resolve: './src/plugins/course-prices',
+  },
 });
 
